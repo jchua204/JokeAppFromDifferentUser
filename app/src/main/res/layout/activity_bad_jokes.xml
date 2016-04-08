@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.student.badjokes.BadJokes">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/proBar"
+        android:max="2"
+        android:layout_below="@+id/txtInstructions"
+        android:layout_toRightOf="@+id/btnDecrease"
+        android:layout_toEndOf="@+id/btnDecrease"
+        android:layout_marginTop="32dp"
+        android:progress="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="less bad"
+        android:id="@+id/btnDecrease"
+        android:layout_alignTop="@+id/btnIncrease"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:onClick="proDecrease" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="more bad"
+        android:id="@+id/btnIncrease"
+        android:layout_below="@+id/btnJoke"
+        android:layout_toRightOf="@+id/proBar"
+        android:layout_toEndOf="@+id/proBar"
+        android:layout_marginTop="83dp"
+        android:onClick="proIncrease" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome to Bad Jokes"
+        android:id="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Use the buttons to determine how bad you want your joke"
+        android:id="@+id/txtInstructions"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let&apos;s hear that joke"
+        android:id="@+id/btnJoke"
+        android:layout_below="@+id/proBar"
+        android:layout_alignLeft="@+id/txtTitle"
+        android:layout_alignStart="@+id/txtTitle"
+        android:layout_marginTop="46dp"
+        android:onClick="newjoke" />
+</RelativeLayout>
