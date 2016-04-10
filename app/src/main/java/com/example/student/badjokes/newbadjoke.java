@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class newbadjoke extends AppCompatActivity {
 
 
-    public int badnesslvl = getIntent().getIntExtra("progress",0) ;
+    public int intbadnesslvl = getIntent().getIntExtra("progress",0) ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,12 +17,12 @@ public class newbadjoke extends AppCompatActivity {
 
 
         String strJoke;
-        if (badnesslvl >1){
-            strJoke ="2";
-        }else if(badnesslvl <1){
-            strJoke = "0";
+        if (intbadnesslvl >1){
+            strJoke ="What's colourful and smart?";
+        }else if(intbadnesslvl <1){
+            strJoke = "What do you call a belt made of watches?";
         }else{
-            strJoke ="1";
+            strJoke ="How did the hipster burn his mouth?";
         }
 
 
@@ -34,12 +34,12 @@ public class newbadjoke extends AppCompatActivity {
         String strAnswer;
 
 
-        if (badnesslvl >1){
-            strAnswer ="2";
-        }else if(badnesslvl <1){
-            strAnswer = "0";
+        if (intbadnesslvl >1){
+            strAnswer ="A brain-bow!";
+        }else if(intbadnesslvl <1){
+            strAnswer = "A waist of time!";
         }else{
-            strAnswer ="1";
+            strAnswer ="He sipped the coffee before it was cool!";
         }
 
         TextView txtAnswer = (TextView) findViewById(R.id.txtAnswer);
