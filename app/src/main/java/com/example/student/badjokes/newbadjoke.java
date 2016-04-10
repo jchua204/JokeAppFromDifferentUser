@@ -10,6 +10,8 @@ public class newbadjoke extends AppCompatActivity {
 
 
     public int intbadnesslvl = getIntent().getIntExtra("progress",0) ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +27,15 @@ public class newbadjoke extends AppCompatActivity {
             strJoke ="How did the hipster burn his mouth?";
         }
 
-
         TextView txtJoke = (TextView) findViewById(R.id.txtJoke);
         txtJoke.setText(strJoke);
+
+
     }
 
     public void getAnswer (View vw){
-        String strAnswer;
 
+        String strAnswer;
 
         if (intbadnesslvl >1){
             strAnswer ="A brain-bow!";

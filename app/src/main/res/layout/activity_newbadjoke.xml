@@ -23,22 +23,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
         android:id="@+id/txtAnswer"
-        android:layout_marginBottom="32dp"
-        android:layout_above="@+id/btnBack"
-        android:layout_toLeftOf="@+id/btnBack"
-        android:layout_toStartOf="@+id/btnBack" />
+        android:layout_below="@+id/txtJoke"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:text="What could be the answer?" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Let&apos;s go back"
         android:id="@+id/btnBack"
-        android:layout_centerVertical="true"
+        android:onClick="goBack"
+        android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/txtJoke"
         android:layout_alignStart="@+id/txtJoke"
-        android:onClick="goBack" />
+        android:layout_marginBottom="77dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -46,9 +46,8 @@
         android:layout_height="wrap_content"
         android:text="What&apos;s the answer?"
         android:id="@+id/btnAnswer"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/btnBack"
+        android:onClick="getAnswer"
+        android:layout_above="@+id/btnBack"
         android:layout_alignLeft="@+id/btnBack"
-        android:layout_alignStart="@+id/btnBack"
-        android:onClick="getAnswer" />
+        android:layout_alignStart="@+id/btnBack" />
 </RelativeLayout>
